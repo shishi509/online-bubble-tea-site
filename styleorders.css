@@ -1,0 +1,19 @@
+h2{
+	color: #474E69;
+}
+.content_wrapper{
+width:1000px;
+height: 800px;
+}
+#content_area{
+width:680px;
+}
+#form_field {
+padding: 25px;
+font-family: Lato;
+}
+
+#summary {
+width:300px;
+float: right;
+}
