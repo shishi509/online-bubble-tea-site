@@ -1,12 +1,17 @@
 h2{
 	color: #474E69;
 }
+
+h4{
+	color: orange;
+}
 .content_wrapper{
 width:1000px;
 height: 800px;
 }
 #content_area{
-width:680px;
+width:630px;
+float: left;
 }
 #form_field {
 padding: 25px;
@@ -14,6 +19,11 @@ font-family: Lato;
 }
 
 #summary {
-width:300px;
+padding: 10px;
+width:270px;
+margin-top: 20px;
+margin-right: 40px;
 float: right;
+border: 2px solid;
+border-radius: 10px;
 }

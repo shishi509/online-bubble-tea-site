@@ -30,29 +30,25 @@
 		<!--Banner and logo ends-->
 		<!--Content wrapper starts-->
 		<div class="content_wrapper">
-			<div id="summary">
-			<br>
-			Your order summary is as below:
-			
-			</div>
 			<div id="content_area">
 				<div id="form_field">
 				<h2>Order Your Bubble Tea</h2>
 				<br>
-				<form method="POST">
+
+			<?php echo "<form method='POST' action='".setSummary($conn)."'>
 				<b>Customer Name:</b>
-				<input type='textbox' name="name">
+				<input type='textbox' name='name'>
 				<b>Mobile:</b>
-				<input type='textbox' name="mobile">
+				<input type='textbox' name='mobile'>
 				<br>
 				<br>
 				<b>Delivery Address:</b>
-				<input type='textbox' name="postcode">
+				<input type='textbox' name='address'>
 				<b>Postcode:</b>
-				<input type='textbox' name="address">
+				<input type='textbox' name='postcode'>
 				<br>
 				<br>
-				<select name="tea">
+				<select name='tea'>
 				<option>Select your bubble tea</option>
 				<option>Milk Tea</option>
 				<option>Hazelnut Milk Tea</option>
@@ -65,39 +61,47 @@
 				<br>
 				<br>
 				<b>Size:</b>
-				<input type='radio' name='size' value='S'> Small
-				<input type='radio' name='size' value='M'> Medium
-				<input type='radio' name='size' value='L'> Large
+				<input type='radio' name='size' value='S'/> Small
+				<input type='radio' name='size' value='M'/> Medium
+				<input type='radio' name='size' value='L'/> Large
 				<br>
 				<br>
 				<b>Sugar Level:</b>
-				<input type='radio' name='sugar' value='0%'> 0%
-				<input type='radio' name='sugar' value='25%'> 25%
-				<input type='radio' name='sugar' value='50%'> 50%
-				<input type='radio' name='sugar' value='75%'> 75%
-				<input type='radio' name='sugar' value='100%'> 100%
+				<input type='radio' name='sugar' value='0%'/> 0%
+				<input type='radio' name='sugar' value='25%'/> 25%
+				<input type='radio' name='sugar' value='50%'/> 50%
+				<input type='radio' name='sugar' value='75%'/> 75%
+				<input type='radio' name='sugar' value='100%'/> 100%
 				<br>
 				<br>
 				<b>Toppings:</b>
-				<input type='checkbox' name='topping' value='pearls'> Pearls
-				<input type='checkbox' name='topping' value='jelly'> Jelly
-				<input type='checkbox' name='topping' value='grass jelly'> Grass Jelly
-				<input type='checkbox' name='topping' value='mango pudding'> Mango Pudding
-				<input type='checkbox' name='topping' value='aloe vera'> Aloe Vera
+				<input type='checkbox' name='topping[]' value='pearls'> Pearls
+				<input type='checkbox' name='topping[]' value='jelly'> Jelly
+				<input type='checkbox' name='topping[]' value='grass jelly'> Grass Jelly
+				<input type='checkbox' name='topping[]' value='mango pudding'> Mango Pudding
+				<input type='checkbox' name='topping[]' value='aloe vera'> Aloe Vera
 				<br>
 				<br>
-				<textarea rows='5' cols='40'name="remarks" placeholder="additional remarks.."></textarea>
+				<textarea rows='5' cols='40'name='remarks' placeholder='additional remarks..'></textarea>
 				<br>
 				<br>
-				<input type='checkbox' name="interested" value='good'> I'm interested in ET bubble tea promotions!
+				<input type='checkbox' name='interested' value='good'> I have more orders!
 				<br>
 				<br>
-				<input type='submit' name="ordersubmit" value='Order Now'>
+				<input type='hidden' name='datetime' value='".date('Y-m-d H:i:s')."'>
+				<input type='submit' name='ordersubmit' value='Order Now'>
+				</form>";			
+?>
 				</div>
+			</div>
+			<div id="summary">
+			<br>
+			<h4>Order Summary: </h4><br>
+<?php
+				getSummary($conn);		
+?>	
 			</div>
 			</div>	
 		</div>
-<?php
-			setSummary($conn);
-?>
+
 </body>

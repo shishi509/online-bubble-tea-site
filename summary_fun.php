@@ -9,12 +9,9 @@ function setSummary($conn) {
 	 $tea = $_POST['tea'];
 	 $size = $_POST['size'];
 	 $sugar = $_POST['sugar'];
-	 $topping = $_POST['topping'];
 	 $remarks = $_POST['remarks'];
-	 $datetime = $_POST['datetime'];
-	 $interested = $_POST['interested'];
-	 $sql = "INSERT INTO orders (name, mobile, address, postcode, tea, size, sugar, topping, remarks, interested)  
-	 VALUES ('$name', '$mobile', '$address', '$postcode', '$tea', '$size', '$sugar', '$topping', '$remarks', '$interested')";
+	 $sql = "INSERT INTO orders (name, mobile, address, postcode, tea, size, sugar, remarks)  
+	 VALUES ('$name', '$mobile', '$address', '$postcode', '$tea', '$size', '$sugar', '$remarks')";
 	 $result = mysql_query($sql);
  }
 }
@@ -23,14 +20,13 @@ function getSummary($conn){
 	$sql = "SELECT * FROM orders";
 	$result = mysql_query($sql);
 	while ($row = mysql_fetch_assoc($result)){
-	echo "<div class='summary-box'><p>";
-		echo $row['name']."<br>";		
-		echo $row['tea']."<br>";
-		echo $row['size']."<br>";	
-	    echo $row['sugar']. "<br>";
-		echo $row['topping']. "<br>";
-		echo nl2br($row['remarks']); /*get line breaks*/
-	echo "</p>
-	</div>";
+		echo "Thank you " .$row['name']." for ordering from ET Bubble Tea"."<br>";
+		echo "Your order is: ".$row['tea']." in ".$row['size']." size with ".$row['sugar']. " sugar<br>";
+	    echo nl2br("Your remark is: ".$row['remarks']."<br>");
+	    echo "<br>";/*get line breaks*/
+	    echo "The subtotle of you order is: $3.5 and your order will be delivered in 30 mins";
+	    echo "<br>";
  }
 }
+
+?>
