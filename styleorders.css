@@ -6,24 +6,62 @@ h4{
 	color: orange;
 }
 .content_wrapper{
-width:1000px;
-height: 800px;
+	width:1000px;
+	height: 800px;
 }
 #content_area{
-width:630px;
-float: left;
+	width:630px;
+	float: left;
 }
 #form_field {
-padding: 25px;
-font-family: Lato;
+	padding: 25px;
+	font-family: Lato;
 }
 
 #summary {
-padding: 10px;
-width:270px;
-margin-top: 20px;
-margin-right: 40px;
-float: right;
-border: 2px solid;
-border-radius: 10px;
+	padding: 10px;
+	width:270px;
+	margin-top: 20px;
+	margin-right: 40px;
+	float: right;
+	border: 2px solid;
+	border-radius: 10px;
+}
+
+.submit input {
+	width:100px; 
+	height: 40px;
+	background-color: #5DADE2;
+	color: #fff;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	cursor: pointer;
+}
+.submit input:hover {
+	background-color: #474E69;
+}
+
+.submit input p {
+	font-family: arial;
+	font-size: 16px;
+	line-height: 16px;
+	color: #282828;
+	font-weight: 100;}
+
+#confirmorder {
+	height: 40;
+	width: 150;
+	margin: 0px -70px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+}
+
+#shippinginfo {
+
+}
+
+#orderinfo {
+
 }

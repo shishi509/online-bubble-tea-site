@@ -85,7 +85,7 @@
 				<textarea rows='5' cols='40'name='remarks' placeholder='additional remarks..'></textarea>
 				<br>
 				<br>
-				<input type='checkbox' name='interested' value='good'> I have more orders!
+				<input type='checkbox' name='more' value='on'> I have more orders!
 				<br>
 				<br>
 				<input type='hidden' name='datetime' value='".date('Y-m-d H:i:s')."'>
@@ -100,8 +100,11 @@
 <?php
 				getSummary($conn);		
 ?>	
+			<br>
+			<input type='submit' name='confirm' value='Confirm and Pay Now'>
 			</div>
 			</div>	
 		</div>
 
 </body>
+
