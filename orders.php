@@ -36,29 +36,52 @@
 				<br>
 
 			<?php echo "<form method='POST' action='".setSummary($conn)."'>
-				<b>Customer Name:</b>
-				<input type='textbox' name='name'>
-				<b>Mobile:</b>
-				<input type='textbox' name='mobile'>
+				<p><b>Selece Your Bubble Tea:</b></p>
 				<br>
-				<br>
-				<b>Delivery Address:</b>
-				<input type='textbox' name='address'>
-				<b>Postcode:</b>
-				<input type='textbox' name='postcode'>
-				<br>
-				<br>
-				<select name='tea'>
-				<option>Select your bubble tea</option>
-				<option>Milk Tea</option>
-				<option>Hazelnut Milk Tea</option>
-				<option>Caramel Milk Tea</option>
-				<option>Honey Milk Tea</option>
-				<option>Chocolate Milk</option>
-				<option>Ovaltine</option>
-				<option>Black Tea Latte</option>
-				</select>
-				<br>
+				<ul class='grid'>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Honey Green Tea'/>
+	  				<img src='images/greentea.jpg'><br>
+	  				Honey Green Tea
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Assam Black Tea'/>
+	  				<img src='images/blacktea.jpg'><br>
+	  				Assam Black Tea
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Yakult Green Tea'/>
+	  				<img src='images/yakulttea.jpg'><br>
+	  				Yakult Green Tea
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Hazelnut Milk Tea'/>
+	  				<img src='images/hazelnuttea.jpg'><br>
+	  				Hazelnut Milk Tea
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Chocolate Milk Tea'/>
+	  				<img src='images/choctea.jpg'><br>
+	  				Chocolate Milk Tea
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Honey Milk Tea'/>
+	  				<img src='images/honeytea.jpg'><br>
+	  				Honey Milk Tea
+					</label>
+					</li>
+				</ul>
 				<br>
 				<b>Size:</b>
 				<input type='radio' name='size' value='S'/> Small
@@ -82,14 +105,23 @@
 				<input type='checkbox' name='topping[]' value='aloe vera'> Aloe Vera
 				<br>
 				<br>
-				<textarea rows='5' cols='40'name='remarks' placeholder='additional remarks..'></textarea>
+				<b>Quantity:</b> 
+				<select name='quantity'>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				</select>
 				<br>
 				<br>
-				<input type='checkbox' name='more' value='on'> I have more orders!
-				<br>
+
 				<br>
 				<input type='hidden' name='datetime' value='".date('Y-m-d H:i:s')."'>
-				<input type='submit' name='ordersubmit' value='Order Now'>
+				<input type='submit' name='ordersubmit' value='Add to Cart'>
 				</form>";			
 ?>
 				</div>

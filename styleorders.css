@@ -58,10 +58,45 @@ h4{
 	left: 50%;
 }
 
-#shippinginfo {
-
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #6699ff;
 }
 
-#orderinfo {
-
+ul.grid {
+	list-style: none;
+	font-size: 0px;
+}
+ul.grid li {
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	margin: 5px;
+	padding: 10px 15px;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-shadow: 0 0 0px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.grid li img {
+	max-width: 80%;
+	height: auto;
+	margin: 0 0 10px;
+}
+ul.grid li p {
+	font-size: .9em;
+	line-height: 1.5em;
+	color: #999;
 }
