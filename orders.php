@@ -36,7 +36,7 @@
 				<br>
 
 			<?php echo "<form method='POST' action='".setSummary($conn)."'>
-				<p><b>Selece Your Bubble Tea:</b></p>
+				<p><b>Select Your Bubble Tea:</b></p>
 				<br>
 				<ul class='grid'>
 					<li>
@@ -98,11 +98,11 @@
 				<br>
 				<br>
 				<b>Toppings:</b>
-				<input type='checkbox' name='topping[]' value='pearls'> Pearls
-				<input type='checkbox' name='topping[]' value='jelly'> Jelly
-				<input type='checkbox' name='topping[]' value='grass jelly'> Grass Jelly
-				<input type='checkbox' name='topping[]' value='mango pudding'> Mango Pudding
-				<input type='checkbox' name='topping[]' value='aloe vera'> Aloe Vera
+				<input type='checkbox' name='topping[]' value='Pearls'> Pearls
+				<input type='checkbox' name='topping[]' value='Jelly'> Jelly
+				<input type='checkbox' name='topping[]' value='Grass Jelly'> Grass Jelly
+				<input type='checkbox' name='topping[]' value='Mango Pudding'> Mango Pudding
+				<input type='checkbox' name='topping[]' value='Aloe Vera'> Aloe Vera
 				<br>
 				<br>
 				<b>Quantity:</b> 

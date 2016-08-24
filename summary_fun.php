@@ -5,9 +5,13 @@ function setSummary($conn) {
 	 $tea = $_POST['tea'];
 	 $size = $_POST['size'];
 	 $sugar = $_POST['sugar'];
-	 $sql = "INSERT INTO orders (tea, size, sugar)  
-	 VALUES ('$tea', '$size', '$sugar')";
-	 $result = mysql_query($sql);
+	 $topping = $_POST['topping'];
+	 $toppings = ""; 
+	 foreach ($topping as $topping1) {
+	 	$toppings .= $topping1 . ", ";
+	 }
+	 $sql = "INSERT INTO orders (tea, size, sugar, toppings)  
+	 VALUES ('$tea', '$size', '$sugar', '$toppings')";
  }
 }
 
@@ -19,8 +23,9 @@ function getSummary($conn){
 		echo $row['tea'];
 		echo "<br>";
 		echo $row['size']." size with ".$row['sugar']. " sugar<br>";
-	    echo "<br>";/*get line breaks*/}
- }
-}
+		echo $row['toppings'];
+ 	}
+	     echo "<br>";/*get line breaks*/}
 
+ }
 ?>
