@@ -8,10 +8,11 @@ function setSummary($conn) {
 	 $topping = $_POST['topping'];
 	 $toppings = ""; 
 	 foreach ($topping as $topping1) {
-	 	$toppings .= $topping1 . ", ";
+	 	$toppings .= $topping1 . "<br>";
 	 }
 	 $sql = "INSERT INTO orders (tea, size, sugar, toppings)  
 	 VALUES ('$tea', '$size', '$sugar', '$toppings')";
+	 $result = mysql_query($sql);
  }
 }
 
@@ -25,7 +26,7 @@ function getSummary($conn){
 		echo $row['size']." size with ".$row['sugar']. " sugar<br>";
 		echo $row['toppings'];
  	}
-	     echo "<br>";/*get line breaks*/}
+	    echo "<br>";/*get line breaks*/}
 
  }
 ?>
