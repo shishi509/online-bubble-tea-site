@@ -2,6 +2,30 @@
 	date_default_timezone_get('Asia/Singapore');
 	include 'dbconnectiontea.php';
 	include 'summary_fun.php';
+	include 'getSummary.php';
+?>
+<?php
+if (empty($_POST) === false){
+	$errors=array();
+	$tea = $_POST['tea'];
+	$size = $_POST['size'];
+	$sugar = $_POST['sugar'];
+	if (empty($tea)===true ){
+		$errors[]= 'Please select your tea!';
+	}
+	else { 
+		if (empty($sugar)===true) {
+			$errors[]= 'Please select the sugar level of your tea!';
+		}
+		if (empty($size)===true) {
+			$errors[]= 'Please select the size of your tea!';
+		}
+	}
+		if (empty($errors)=== true){
+		header('Location: order_summary.php');
+
+	}
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -34,7 +58,17 @@
 				<div id="form_field">
 				<h2>Order Your Bubble Tea</h2>
 				<br>
-
+<?php 
+		if (isset($_GET['submit'])===true) {
+				echo '<p>Thanks for contacting us!</p>';
+			} else {
+		if (empty($errors)=== false){
+		foreach ($errors as $error){
+			echo '<li>'.$error. '</li>';
+			echo '<br>';
+		}
+	}
+?>
 			<?php echo "<form method='POST' action='".setSummary($conn)."'>
 				<p><b>Select Your Bubble Tea:</b></p>
 				<br>
@@ -81,6 +115,48 @@
 	  				Honey Milk Tea
 					</label>
 					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Konjac Jelly Milk Tea'/>
+	  				<img src='images/kongjacjelly.jpg'><br>
+	  				Konjac Jelly Milk Tea
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Black Tea Macchiato'/>
+	  				<img src='images/blackmacchiato.jpg'><br>
+	  				Black Tea Macchiato
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Green Tea Macchiato'/>
+	  				<img src='images/greenmacchiato.jpg'><br>
+	  				Green Tea Macchiato
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='KOI Cafe'/>
+	  				<img src='images/koicafe.png'><br>
+	  				KOI Cafe
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Peach Green Tea'/>
+	  				<img src='images/peachgreen.jpg'><br>
+	  				Peach Green Tea
+					</label>
+					</li>
+					<li>
+					<label>
+	  				<input type='radio' name='tea' value='Honey Aloe Vera'/>
+	  				<img src='images/honeyaloevera.jpg'><br>
+	  				Honey Aloe Vera
+					</label>
+					</li>
 				</ul>
 				<br>
 				<b>Size:</b>
@@ -90,11 +166,11 @@
 				<br>
 				<br>
 				<b>Sugar Level:</b>
-				<input type='radio' name='sugar' value='0%'/> 0%
-				<input type='radio' name='sugar' value='25%'/> 25%
-				<input type='radio' name='sugar' value='50%'/> 50%
-				<input type='radio' name='sugar' value='75%'/> 75%
-				<input type='radio' name='sugar' value='100%'/> 100%
+				<input type='radio' name='sugar' value='0% Sugar'/> 0%
+				<input type='radio' name='sugar' value='25% Sugar'/> 25%
+				<input type='radio' name='sugar' value='50% Sugar'/> 50%
+				<input type='radio' name='sugar' value='75% Sugar'/> 75%
+				<input type='radio' name='sugar' value='100% Sugar'/> 100%
 				<br>
 				<br>
 				<b>Toppings:</b>
@@ -105,38 +181,19 @@
 				<input type='checkbox' name='topping[]' value='Aloe Vera'> Aloe Vera
 				<br>
 				<br>
-				<b>Quantity:</b> 
-				<select name='quantity'>
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				<option>6</option>
-				<option>7</option>
-				<option>8</option>
-				</select>
-				<br>
-				<br>
 
 				<br>
-				<input type='hidden' name='datetime' value='".date('Y-m-d H:i:s')."'>
 				<input type='submit' name='ordersubmit' value='Add to Cart'>
 				</form>";			
 ?>
+			<?php
+			}
+			?> 
+
 				</div>
-			</div>
-			<div id="summary">
-			<br>
-			<h4>Order Summary: </h4><br>
-<?php
-				getSummary($conn);		
-?>	
-			<br>
-			<input type='submit' name='confirm' value='Confirm and Pay Now'>
 			</div>
 			</div>	
 		</div>
 
 </body>
-
+</html>
