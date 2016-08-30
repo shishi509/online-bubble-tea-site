@@ -1,7 +1,6 @@
 <?php
 	date_default_timezone_get('Asia/Singapore');
 	include 'dbconnectiontea.php';
-	include 'getSummary.php';
 ?>			
 <!DOCTYPE HTML>
 <html>
@@ -42,14 +41,36 @@
 						<th>Quantity</th>
 						<th>Total Price</th>
 					</tr>
+<?php 
+					function getSummary($conn){
+						$sql = "SELECT * FROM orders";
+						$result = mysql_query($sql);
+						while ($row = mysql_fetch_assoc($result)){
+						@$unitprice=$teaprice+$bubbleprice;
+						$bubbleprice=0.3*$row['Ntoppings'];
+						if ($row['size']=="S"){
+							$teaprice=2.8;
+						}
+						elseif ($row['size']=="M"){
+							$teaprice=3.5;
+						}
+						else {
+							$teaprice=3.9;
+						}
+					?> 
 					<tr align="center">
 					<td><input type="checkbox" name="remove[]"/></td>
 					<td><?php 
-					getSummary($conn);
-					?> </td>
+							echo $row['tea']."-";
+							echo $row['size'];
+							echo "<br>";
+							echo $row['toppings']; ?></td>
 					<td><input type="text" size="4" name="qty"/> </td>
-					<td></td>
+					<td><?php echo $unitprice; ?></td>
 					</tr>
+					<?php } }  
+					getSummary($conn);
+					?>
 			<br>
 			</div>
 		</div>

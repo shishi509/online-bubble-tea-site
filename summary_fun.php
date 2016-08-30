@@ -9,15 +9,15 @@ function setSummary($conn) {
 	 if (isset($_POST['topping'])) {
 	 @$toppings = ""; 
 	 foreach ($topping as $topping1) {
-	 	$toppings .= $topping1 . "<br>";
+	 	$toppings .= $topping1 . "/";
 	 }
 	 }
 	 else {
 	 	$toppings = '';
 	 }
-	 $quantity = $_POST['quantity'];
-	 $sql = "INSERT INTO orders (tea, size, sugar, toppings)  
-	 VALUES ('$tea', '$size', '$sugar', '$toppings')";
+	 $Ntoppings = count($topping);
+	 $sql = "INSERT INTO orders (tea, size, sugar, toppings, Ntoppings)  
+	 VALUES ('$tea', '$size', '$sugar', '$toppings', '$Ntoppings')";
 	 $result = mysql_query($sql);
  }
 }
