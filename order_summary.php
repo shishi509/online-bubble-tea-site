@@ -1,6 +1,7 @@
 <?php
 	date_default_timezone_get('Asia/Singapore');
 	include 'dbconnectiontea.php';
+	include 'getSummary.php';
 ?>			
 <!DOCTYPE HTML>
 <html>
@@ -31,46 +32,23 @@
 		<div class="content_wrapper">
 			<div id="summary">
 			<br>
-			<h2>Order Summary: </h2><br>
+			<h2>Order Summary: </h2>
 			<div id="order_summary">
 			<form action="" method="POST" enctype="multipart/form-data">
-				<table aligh="center" width="800" bgcolor="skyblue">
+				<table aligh="center" width="800" bgcolor="white">
 					<tr align="center">
 						<th>Remove</th>
 						<th>Product(s)</th>
 						<th>Quantity</th>
 						<th>Total Price</th>
 					</tr>
-<?php 
-					function getSummary($conn){
-						$sql = "SELECT * FROM orders";
-						$result = mysql_query($sql);
-						while ($row = mysql_fetch_assoc($result)){
-						@$unitprice=$teaprice+$bubbleprice;
-						$bubbleprice=0.3*$row['Ntoppings'];
-						if ($row['size']=="S"){
-							$teaprice=2.8;
-						}
-						elseif ($row['size']=="M"){
-							$teaprice=3.5;
-						}
-						else {
-							$teaprice=3.9;
-						}
-					?> 
-					<tr align="center">
-					<td><input type="checkbox" name="remove[]"/></td>
-					<td><?php 
-							echo $row['tea']."-";
-							echo $row['size'];
-							echo "<br>";
-							echo $row['toppings']; ?></td>
-					<td><input type="text" size="4" name="qty"/> </td>
-					<td><?php echo $unitprice; ?></td>
+					<?php getSummary($conn);?>
+					<tr align="right">
+						<td colspan="5"><b>Sub Total: </b></td>
+						<td><?php 
+						@$total += $unitprice;
+						echo $total;?></td>
 					</tr>
-					<?php } }  
-					getSummary($conn);
-					?>
 			<br>
 			</div>
 		</div>

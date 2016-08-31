@@ -1,5 +1,20 @@
 #summary{
 	width:1000px;
 	height: 1100px;
-	padding: 25px;
+	padding: 15px;
+	margin-left: 40px;
+}
+th {
+	 height: 40px;
+	 line-height: 40px;
+	 background-color: #00994d;
+	 font-weight: bold;
+	 font-size: 18px;
+	 color: white;
+
+}
+
+tr.border td{
+	height: 45px;
+	background-color: #ccffe6;
 }
