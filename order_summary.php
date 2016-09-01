@@ -44,10 +44,15 @@
 					</tr>
 					<?php getSummary($conn);?>
 					<tr align="right">
-						<td colspan="5"><b>Sub Total: </b></td>
-						<td><?php 
-						@$total += $unitprice;
-						echo $total;?></td>
+						<td colspan="3" ><b>Sub Total: </b></td>
+						<td align="center"><b><?php 
+						getSubtotal($conn);
+?></b></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><input type="submit" name="update_cart" value="Update Cart"/></td>
+						<td><input type="submit" name="continue" value="Continue Ordering"/></td>
+						<td><button><a herf="checkout.php">Checkout</a></button></td>
 					</tr>
 			<br>
 			</div>
