@@ -7,6 +7,7 @@
 		<title>ET Bubble Tea Shop</title>
 	
 	<link rel="stylesheet" href="styles/style.css" media="all"/>
+	<link rel="stylesheet" href="styleindex.css" media="all"/>
 	</head>
 
 <body>

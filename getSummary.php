@@ -6,10 +6,10 @@
 						$sql = "SELECT * FROM orders";
 						$result = mysql_query($sql);
 						while ($row = mysql_fetch_assoc($result)){
-
+						$id=$row['id'];
 					?> 
 					<tr class="border" align="center">
-					<td><input type="checkbox" name="remove[]"/></td>
+					<td><input type="checkbox" name="remove[]" value="<?php $row['id'];?>"/></td>
 					<td><?php 
 							echo $row['tea']."-";
 							echo $row['size'];
@@ -34,4 +34,21 @@
 							echo $total;
 					}
 
+
 	?>
+
+<?php     
+					function deleteOrders($conn){
+						$sql = "SELECT * FROM orders";
+						$result = mysql_query($sql);
+						while ($row = mysql_fetch_assoc($result)){
+						$id=$row['id'];}
+					if(isset($_POST['update_cart'])) {
+						foreach ($_POST['remove'] as $remove_id){
+						$sql = "DELETE FROM orders WHERE id='$id'";
+						$result = mysql_query($sql);
+						}
+
+					}
+}
+					?>

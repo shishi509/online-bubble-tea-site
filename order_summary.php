@@ -51,6 +51,7 @@
 					</tr>
 					<tr align="center">
 						<td colspan="2"><input type="submit" name="update_cart" value="Update Cart"/></td>
+					<?php deleteOrders($conn);?>
 						<td><input type="submit" name="continue" value="Continue Ordering"/></td>
 						<td><button><a herf="checkout.php">Checkout</a></button></td>
 					</tr>

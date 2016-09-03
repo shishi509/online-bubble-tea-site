@@ -1,3 +1,18 @@
+h2{
+	color: #474E69;
+}
+
+h4{
+	color: orange;
+}
+.content_wrapper{
+	width:1000px;
+	height: 1100px;
+}
+#content_area{
+	width:1000px;
+	float: left;
+}
 #summary{
 	width:1000px;
 	height: 1100px;
