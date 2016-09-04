@@ -1,7 +1,7 @@
 <?php
 /*insert summary*/
 function setSummary($conn) {
- if(isset($_POST['ordersubmit'])){
+ if(isset($_POST['ordersubmit'],$_POST['tea'], $_POST['size'], $_POST['sugar'])){
 	 @$tea = $_POST['tea'];
 	 @$size = $_POST['size'];
 	 @$sugar = $_POST['sugar'];
