@@ -9,7 +9,7 @@
 						$id=$row['id'];
 					?> 
 					<tr class="border" align="center">
-					<td><input type="checkbox" name="remove[]" value="<?php $row['id'];?>"/></td>
+					<td><?php echo "<input type='checkbox' name='remove[]' value='".$row['id']."'/>"; ?></td>
 					<td><?php 
 							echo $row['tea']."-";
 							echo $row['size'];
@@ -33,8 +33,6 @@
 							@$total += $unitprice;}
 							echo $total;
 					}
-
-
 	?>
 
 <?php     
@@ -45,10 +43,14 @@
 						$id=$row['id'];}
 					if(isset($_POST['update_cart'])) {
 						foreach ($_POST['remove'] as $remove_id){
-						$sql = "DELETE FROM orders WHERE id='$id'";
+						$sql = "DELETE FROM orders WHERE id='$remove_id'";
 						$result = mysql_query($sql);
+						header("Location: order_summary.php");
 						}
-
 					}
 }
+					if (isset($_POST['continue'])) {
+						header("Location: orders.php");
+					}
 					?>
+
