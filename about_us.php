@@ -59,28 +59,28 @@
                 <h3>Xinya Cai<br>
                     <small>Recipe Developer</small>
                 </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p>Adventurous and neophiliac are two traits that make Xinya a great recipe developer. Having dined at tons of cafes and tried out different drinks, she brings creativities in recipe development. You can surely find the unique and tasty bubble tea that you like.</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="images/aboutusL.jpg" alt="">
                 <h3>Lorraine Lai<br>
                     <small>Process Optimizer</small>
                 </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p>Certified with ISO 27001 internal audit, Lorraine is expert in process optimisation. She once helped a mixed vegie rice stall to increase the lunch traffic from 300 to 500 by optimising their ordering and serving processes. She makes sure your tea reaches within 30 minutes. </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="images/aboutusS.jpg" alt="">
                 <h3>Stephanie Gu<br>
                     <small>Bubble Tea Specialist</small>
                 </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p>Stephanie can DIY everything from handmade dollhouse to homemade kimchi. With a combination of her innovations and her expertises in recreating the things that she has seen or tried, you can have high expectations of the bubble tea you order. </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="images/aboutusZ.jpg" alt="">
                 <h3>Shirui Zhang<br>
-                    <small>Product Taster</small>
+                    <small>Quality Assurance</small>
                 </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p>Shirui is very consistent when it comes to food and drinks choices. She once had lunch at a same bee hoon stall everyday for half a year. This makes her a good quality control executive that ensures consistent tastes and quality of our products. </p>
             </div>
         </div>
 
