@@ -22,7 +22,7 @@
 			<ul id="menu">
 				<li><a href="index.php">Home</a></li>
 				<li><a href="orders.php">Order Online</a></li>
-				<li><a href="promotions.php">Promotions</a></li
+				<li><a href="news.php">News</a></li
 				<li><a href="about_us.php">About Us</a></li>
 				<li><a href="contact_us.php">Contact Us</a></li>
 			</ul>
@@ -45,7 +45,12 @@
                 <h1 class="page-header">About Us
                     <small>It's Nice to Meet You!</small>
                 </h1>
-                <p>We are a team of editors working in an IT company Microhard who have co-founded the online bubble tea shop in 2016. <br>We are foodies who are never tired of discussing about, exploring and sharing good food. </p>
+                <h4><b>Who We Are?</b></h4>
+                <p>We are a team of editors working in an IT company Microhard who have co-founded the online bubble tea shop in 2016.</p>
+                <h4><b>What We Do?</b></h4>
+                <p>We make and sell homemade healthy bubble tea with Lipton tea bags, fresh milk and natural ingredients.</p>
+                <h4><b>What Makes us Unique?</b></h4>
+                <p>Our bubble teas are healthy, low in calories and can be delivered islandwide within 30 minutes. We offer mostly non-traditional yet tasty flavors.</p>            
             </div>
         </div>
 
@@ -59,7 +64,7 @@
                 <h3>Xinya Cai<br>
                     <small>Recipe Developer</small>
                 </h3>
-                <p>Adventurous and neophiliac are two traits that make Xinya a great recipe developer. Having dined at tons of cafes and tried out different drinks, she brings creativities in recipe development. You can surely find the unique and tasty bubble tea that you like.</p>
+                <p>Adventurous and neophiliac are two traits that make Xinya a great recipe developer. Having dined at tons of cafes and tried out all kinds of drinks, she brings creativities in recipe development. You can surely find the unique and tasty bubble tea that you like.</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="images/aboutusL.jpg" alt="">
@@ -73,14 +78,14 @@
                 <h3>Stephanie Gu<br>
                     <small>Bubble Tea Specialist</small>
                 </h3>
-                <p>Stephanie can DIY everything from handmade dollhouse to homemade kimchi. With a combination of her innovations and her expertises in recreating the things that she has seen or tried, you can have high expectations of the bubble tea you order. </p>
+                <p>Stephanie can DIY everything from handmade fully furnished dollhouse to homemade kimchi. With a combination of her culinary innovations and her abilities in recreating the things that she has seen or tried, you can have high expectations of the bubble tea you order. </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="images/aboutusZ.jpg" alt="">
                 <h3>Shirui Zhang<br>
                     <small>Quality Assurance</small>
                 </h3>
-                <p>Shirui is very consistent when it comes to food and drinks choices. She once had lunch at a same bee hoon stall everyday for half a year. This makes her a good quality control executive that ensures consistent tastes and quality of our products. </p>
+                <p>Shirui is very consistent when it comes to food and drinks choices. She once had lunch at a same bee hoon stall every day for half a year. This makes her a good quality control executive that ensures consistent tastes and quality of our products. </p>
             </div>
         </div>
 
