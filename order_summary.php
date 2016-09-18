@@ -17,7 +17,7 @@
 			<ul id="menu">
 				<li><a href="index.php">Home</a></li>
 				<li><a href="orders.php">Order Online</a></li>
-				<li><a href="promotions.php">Promotions</a></li
+				<li><a href="news.php">News</a></li
 				<li><a href="about_us.php">About Us</a></li>
 				<li><a href="contact_us.php">Contact Us</a></li>
 			</ul>
@@ -47,6 +47,7 @@
 						<td colspan="3" ><b>Sub Total: </b></td>
 						<td align="center"><b><?php 
 						getSubtotal($conn);
+						
 ?></b></td>
 					</tr>
 					<tr align="center">

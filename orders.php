@@ -41,7 +41,7 @@ if (empty($_POST) === false){
 			<ul id="menu">
 				<li><a href="index.php">Home</a></li>
 				<li><a href="orders.php">Order Online</a></li>
-				<li><a href="promotions.php">Promotions</a></li
+				<li><a href="news.php">News</a></li
 				<li><a href="about_us.php">About Us</a></li>
 				<li><a href="contact_us.php">Contact Us</a></li>
 			</ul>
@@ -160,28 +160,51 @@ if (empty($_POST) === false){
 				</ul>
 				<br>
 				<b>Size:</b>
-				<input type='radio' name='size' value='S'/> Small
-				<input type='radio' name='size' value='M'/> Medium
-				<input type='radio' name='size' value='L'/> Large
-				<br>
-				<br>
+				<input id=size1 type='radio' name='size' value='S'/>
+				<label for='size1'>Small</label>
+				<input id=size2 type='radio' name='size' value='M'/>
+				<label for='size2'>Medium</label>
+				<input id=size3 type='radio' name='size' value='L'/>
+				<label for='size3'>Large</label>
+				<br><br>
 				<b>Sugar Level:</b>
-				<input type='radio' name='sugar' value='0% Sugar'/> 0%
-				<input type='radio' name='sugar' value='25% Sugar'/> 25%
-				<input type='radio' name='sugar' value='50% Sugar'/> 50%
-				<input type='radio' name='sugar' value='75% Sugar'/> 75%
-				<input type='radio' name='sugar' value='100% Sugar'/> 100%
+				<input id=sugar0 type='radio' name='sugar' value='0% Sugar'/>
+				<label for='sugar0'>0%</label>
+				<input id=sugar1 type='radio' name='sugar' value='25% Sugar'/> 
+				<label for='sugar1'>25%</label>
+				<input id=sugar2 type='radio' name='sugar' value='50% Sugar'/>
+				<label for='sugar2'>50%</label>
+				<input id=sugar3 type='radio' name='sugar' value='75% Sugar'/>
+				<label for='sugar3'>75%</label>
+				<input id=sugar4 type='radio' name='sugar' value='100% Sugar'/> 
+				<label for='sugar4'>100%</label>
 				<br>
 				<br>
 				<b>Toppings:</b>
-				<input type='checkbox' name='topping[]' value='Pearls'> Pearls
-				<input type='checkbox' name='topping[]' value='Jelly'> Jelly
-				<input type='checkbox' name='topping[]' value='Grass Jelly'> Grass Jelly
-				<input type='checkbox' name='topping[]' value='Mango Pudding'> Mango Pudding
-				<input type='checkbox' name='topping[]' value='Aloe Vera'> Aloe Vera
+				<input id=topping1 type='checkbox' name='topping[]' value='Pearls'>
+				<label for='topping1'>Pearls</label>
+				<input id=topping2 type='checkbox' name='topping[]' value='Jelly'>
+				<label for='topping2'>Jelly</label>
+				<input id=topping3 type='checkbox' name='topping[]' value='Grass Jelly'>
+				<label for='topping3'>Grass Jelly</label>
+				<input id=topping4 type='checkbox' name='topping[]' value='Mango Pudding'>
+				<label for='topping4'>Mango Pudding</label>
+				<input id=topping5 type='checkbox' name='topping[]' value='Aloe Vera'>
+				<label for='topping5'>Aloe Vera</label>
 				<br>
 				<br>
-
+				<b>Quantity:</b> 
+ 				<select name='quantity'>
+ 				<option value='1'>1</option>
+ 				<option value='2'>2</option>
+ 				<option value='3'>3</option>
+ 				<option value='4'>4</option>
+ 				<option value='5'>5</option>
+ 				<option value='6'>6</option>
+ 				<option value='7'>7</option>
+ 				<option value='8'>8</option>
+ 				</select>
+				<br>
 				<br>
 				<input type='submit' name='ordersubmit' value='Add to Cart'>
 				</form>";			

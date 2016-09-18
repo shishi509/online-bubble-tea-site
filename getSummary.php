@@ -16,7 +16,8 @@
 							echo "<br>";
 							echo $row['toppings']; 
 							?></td>
-					<td><input type="text" size="4" name="qty"/> </td>
+					<td><?php echo "<input type='text' size='2' name='qty' value='".$row['quantity']."'/>"; ?></td>
+	
 					<td><?php echo $row['unitprice'];
 						@$total+=$unitprice;
 							  ?></td>
@@ -30,6 +31,8 @@
 						$total=0;
 						while ($row = mysql_fetch_assoc($result)){
 							$unitprice= $row['unitprice'];
+							$quantity = $row['quantity'];
+							$unitprice*=$quantity;
 							@$total += $unitprice;}
 							echo $total;
 					}

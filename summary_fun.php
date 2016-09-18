@@ -6,6 +6,7 @@ function setSummary($conn) {
 	 @$size = $_POST['size'];
 	 @$sugar = $_POST['sugar'];
 	 @$topping = $_POST['topping'];
+	 @$quantity = $_POST['quantity'];
 	 if (isset($_POST['topping'])) {
 	 @$toppings = ""; 
 	 foreach ($topping as $topping1) {
@@ -27,8 +28,8 @@ function setSummary($conn) {
 		$teaprice=3.9;
 		}
 	$unitprice=$teaprice+$bubbleprice;	 
-	 $sql = "INSERT INTO orders (tea, size, sugar, toppings, Ntoppings, unitprice)  
-	 VALUES ('$tea', '$size', '$sugar', '$toppings', '$Ntoppings', '$unitprice')";
+	 $sql = "INSERT INTO orders (tea, size, sugar, toppings, Ntoppings, unitprice, quantity)  
+	 VALUES ('$tea', '$size', '$sugar', '$toppings', '$Ntoppings', '$unitprice', '$quantity')";
 	 $result = mysql_query($sql);
  }
 }
