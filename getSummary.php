@@ -16,7 +16,7 @@
 							echo "<br>";
 							echo $row['toppings']; 
 							?></td>
-					<td><?php echo "<input type='text' size='2' name='qty' value='".$row['quantity']."'/>"; ?></td>
+					<td><?php echo $row['quantity']; ?></td>
 	
 					<td><?php echo $row['unitprice'];
 						@$total+=$unitprice;
