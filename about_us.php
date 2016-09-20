@@ -71,7 +71,7 @@
                 <h3>Lorraine Lai<br>
                     <small>Process Optimizer</small>
                 </h3>
-                <p>Certified with ISO 27001 internal audit, Lorraine is expert in process optimisation. She once helped a mixed vegie rice stall to increase the lunch traffic from 300 to 500 by optimising their ordering and serving processes. She makes sure your tea reaches within 30 minutes. </p>
+                <p>Certified with ISO 27001 internal audit, Lorraine is expert in process optimisation. She once helped a mixed veggie rice stall to increase the lunch traffic from 300 to 500 by optimising their ordering and serving processes. She makes sure your tea reaches within 30 minutes. </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="images/aboutusS.jpg" alt="">
