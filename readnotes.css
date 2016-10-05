@@ -1,0 +1,15 @@
+.comment-box {
+	width: 1200px;
+	padding: 5px;
+	margin-bottom: 24px;
+	background-color: #fcefef;
+	position: relative;  
+}
+.comment-box p {
+	font-family: arial;
+	font-size: 14px;
+	line-height: 25px;
+	margin-bottom:-1.5em;
+	color: #282828;
+	font-weight: 100;
+}
