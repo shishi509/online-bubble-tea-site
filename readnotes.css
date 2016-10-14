@@ -1,15 +1,19 @@
 .comment-box {
-	width: 1200px;
-	padding: 5px;
-	margin-bottom: 24px;
+	width: auto;
+	margin-bottom: 40px;
 	background-color: #fcefef;
-	position: relative;  
+	padding: 10px;
 }
 .comment-box p {
 	font-family: arial;
 	font-size: 14px;
 	line-height: 25px;
-	margin-bottom:-1.5em;
 	color: #282828;
 	font-weight: 100;
+}
+
+.title {
+	font-family: arial;
+	font-size: 16 px;
+	font-weight: bold;
 }

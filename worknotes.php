@@ -86,5 +86,4 @@
 		echo "<script>window.open('worknotes.php','_self')</script>";	
 	}
 	}
-	
 ?>

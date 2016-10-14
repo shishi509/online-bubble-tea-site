@@ -15,10 +15,12 @@ function getComments($conn){
 	$result = mysql_query($sql);
 	while ($row = mysql_fetch_assoc($result)){
 	echo "<div class='comment-box'><p>";
+	echo "<div class='title'>";
 		echo $row['title']."<br>"."<br>";
-		echo $row['datetime']."<br>"."<br>";	
+		echo "</div>";
+		echo $row['datetime']."<br>";	
 		echo nl2br($row['note']); /*get line breaks*/
-
+		echo "</div>";
 }}
 	getComments($conn);
 ?>
