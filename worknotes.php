@@ -10,13 +10,13 @@
 <script>tinymce.init({ selector:'textarea' });
 </script>
 <!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css"><![endif]-->
-<link rel="stylesheet" href="styleinsert_tea.css">
+<link rel="stylesheet" href="styleworknotes.css">
 	</head>
 
-<body bgcolor="#cce6ff">
+<body background="bg.jpg">
 
 	<form action="worknotes.php" method="post" enctype="multipart/form-data">
-		<table align="center" width="700" border="2" bgcolor="#ffcce6">
+		<table align="center" width="700" border="2">
 			<tr align="center">
 				<td colspan="7"><h2>Create New Entry Here</h2></td>
 			</tr>
@@ -87,3 +87,4 @@
 	}
 	}
 ?>
+

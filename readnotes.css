@@ -1,8 +1,11 @@
 .comment-box {
-	width: auto;
+	width: 1000px;
 	margin-bottom: 20px;
+	margin-right: 40px;
 	background-color: #fcefef;
 	padding: 10px;
+	float: right;
+	border-radius:3px;
 }
 .comment-box p {
 	font-family: arial;
@@ -11,11 +14,18 @@
 	color: #282828;
 	font-weight: 100;
 	margin-top: 1px;
-	margin-bottom: 1px;
+	margin: 7px;
 }
 
 .title {
 	font-family: arial;
 	font-size: 16 px;
 	font-weight: bold;
+	margin: 7px;
+}
+
+.time {
+	font-family: arial;
+	font-size: 13px;
+	margin: 7px;
 }
