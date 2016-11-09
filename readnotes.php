@@ -10,7 +10,12 @@
 <link rel="stylesheet" href="readnotes.css">
 	</head>
 <body background="bg2.jpg">
-<?php 
+<div class="content_area">
+<div class="side_bar">
+<p>Categories</p>
+<p>Month</p>
+</div>
+<?php  
 function getComments($conn){
 	$sql = "SELECT * FROM work_notes";
 	$result = mysql_query($sql);
@@ -27,5 +32,6 @@ function getComments($conn){
 }}
 	getComments($conn);
 ?>
+</div>
 </body>
 </html>

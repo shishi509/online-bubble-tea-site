@@ -1,8 +1,8 @@
 .comment-box {
-	width: 1000px;
+	width: 1200px;
 	margin-bottom: 20px;
 	margin-right: 40px;
-	background-color: #fcefef;
+	background-color: #f0f0f0;
 	padding: 10px;
 	float: right;
 	border-radius:3px;
@@ -28,4 +28,17 @@
 	font-family: arial;
 	font-size: 13px;
 	margin: 7px;
+}
+
+.side_bar {
+	margin-left: 10px;
+	width:250px;
+	height: 800px;
+	background: #f0f0f0;
+	float: left;
+	border-radius:3px;
+}
+
+.side_bar p {
+	padding-left: 1px;
 }
