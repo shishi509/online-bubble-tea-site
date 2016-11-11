@@ -13,6 +13,18 @@
 <div class="content_area">
 <div class="side_bar">
 <p>Categories</p>
+<?php  
+function getCats($conn){
+	$sql = "SELECT * FROM category";
+	$result = mysql_query($sql);
+	while ($row = mysql_fetch_assoc($result)){
+	echo "<div class='cats'>";
+		echo $row['category_title']."<br>"."<br>";
+		echo "</div>";
+}}
+	getCats($conn);
+?>
+
 <p>Month</p>
 </div>
 <?php  
