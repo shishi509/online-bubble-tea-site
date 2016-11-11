@@ -19,7 +19,9 @@ function getCats($conn){
 	$result = mysql_query($sql);
 	while ($row = mysql_fetch_assoc($result)){
 	echo "<div class='cats'>";
+		echo '<a href="http://www.website.com/page.html">';
 		echo $row['category_title']."<br>"."<br>";
+		echo '</a>';
 		echo "</div>";
 }}
 	getCats($conn);
