@@ -24,15 +24,13 @@ h4{
 input[type=submit] {
 	width:100px; 
 	height: 40px;
-	background-color: #5DADE2;
+	background-color: #F0AD4E;
 	color: #fff;
 	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
 	cursor: pointer;
 }
 input[type=submit] hover {
-	background-color: #474E69;
+	background-color: #F0AD4E;
 }
 
 input[type=submit] p {

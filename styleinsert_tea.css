@@ -1,0 +1,5 @@
+table {
+  background:#ffe6f3;
+  } 
+  
+.boldtable, .boldtable TD, .boldtable TH { font-family:sans-serif; font-size:20pt; color:white; background-color:navy; }

@@ -38,7 +38,7 @@
 				<table aligh="center" width="800" bgcolor="white">
 					<tr align="center">
 						<th>Remove</th>
-						<th>Product(s)</th>
+						<th>Product (s)</th>
 						<th>Quantity</th>
 						<th>Total Price</th>
 					</tr>
@@ -47,14 +47,13 @@
 						<td colspan="3" ><b>Sub Total: </b></td>
 						<td align="center"><b><?php 
 						getSubtotal($conn);
-						
 ?></b></td>
 					</tr>
 					<tr align="center">
 						<?php deleteOrders($conn);?>
 						<td colspan="2"><input type="submit" name="update_cart" value="Update Cart"/></td>
 						<td><input type="submit" name="continue" value="Continue Ordering"/></td>
-						<td><button><a herf="checkout.php">Checkout</a></button></td>
+						<td><button name="checkout">Checkout</button></td>
 					</tr>
 			<br>
 			</div>

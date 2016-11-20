@@ -18,8 +18,11 @@
 							?></td>
 					<td><?php echo $row['quantity']; ?></td>
 	
-					<td><?php echo $row['unitprice'];
-						@$total+=$unitprice;
+					<td><?php 
+							$unitprice= $row['unitprice'];
+							$quantity = $row['quantity'];
+							$unitprice*=$quantity;
+							echo $unitprice;
 							  ?></td>
 					</tr>
 					<?php } }  ?>
@@ -55,5 +58,7 @@
 					if (isset($_POST['continue'])) {
 						header("Location: orders.php");
 					}
+					if (isset($_POST['checkout'])) {
+						header("Location: login.php");
+					}
 					?>
-
