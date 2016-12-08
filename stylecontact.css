@@ -50,6 +50,7 @@ input: focus, textarea: focus {
 .submit input {
 	width:100px; 
 	height: 40px;
+	font-size: 18px;
 	background-color: #5DADE2;
 	color: #fff;
 	border-radius:3px;
@@ -62,7 +63,7 @@ input: focus, textarea: focus {
 }
 
 .submit input p {
-	font-size: 16px;
-	line-height: 16px;
+	line-height: 20x;
 	color: #282828;
-	font-weight: 100;}
+	font-weight: 100;
+}

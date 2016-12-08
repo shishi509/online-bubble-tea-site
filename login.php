@@ -4,14 +4,16 @@ if(isset($_POST['loginbtn'])){
 	require 'dbconnectiontea.php';
 	$username=$_POST['username'];
 	$password=$_POST['password'];
-	$sql = "SELECT * FROM users";
+	$sql = "SELECT * FROM users WHERE BINARY username=BINARY '$username' AND BINARY password=BINARY '$password'";
 	$result = mysql_query($sql);
-	if(mysql_num_rows($result)==1){
+	$values = mysql_fetch_array($result);
+	if($username=$values['username']){
 	$_SESSION['username']=$username;
 	header('Location:welcome.php');
 	}
-	else
-		echo "Account's invalid";
+	else 	
+	echo "Your account or password is invalid";
+	
 }
 if(isset($_GET['logout'])) {
 	session_unregister('username');
