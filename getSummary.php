@@ -58,7 +58,4 @@
 					if (isset($_POST['continue'])) {
 						header("Location: orders.php");
 					}
-					if (isset($_POST['checkout'])) {
-						header("Location: login.php");
-					}
 					?>
