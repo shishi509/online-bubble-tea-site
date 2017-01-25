@@ -35,7 +35,7 @@
 		<!--Banner and logo ends-->
 		<!--Content wrapper starts-->
 		<div class="content_wrapper">
-		<div id="content_area">
+		<div id="content_area_about_us">
 		    <!-- Page Content -->
     <div class="container">
 
